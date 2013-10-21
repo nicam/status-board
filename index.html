@@ -1,0 +1,270 @@
+<!doctype html>
+<html>
+<head>
+    <title>Status board</title>
+    <meta charset='utf-8'> 
+    <style type="text/css">
+
+        body {
+            font-size: 16px;
+        }
+
+        .threeThird iframe {
+            zoom: 0.75;
+            -moz-transform: scale(0.75);
+            -moz-transform-origin: 0 0;
+            -o-transform: scale(0.75);
+            -o-transform-origin: 0 0;
+            -webkit-transform: scale(0.75);
+            -webkit-transform-origin: 0 0;
+        }
+
+        .half iframe {
+            zoom: 0.5;
+            -moz-transform: scale(0.5);
+            -moz-transform-origin: 0 0;
+            -o-transform: scale(0.5);
+            -o-transform-origin: 0 0;
+            -webkit-transform: scale(0.5);
+            -webkit-transform-origin: 0 0;
+        }
+
+        .srfContainer, .modemContainer, .wetterContainer, .sbbContainer, .modemContainer2
+        {
+            overflow: hidden;
+            position: relative;
+        }
+
+        .srfContainer iframe, .modemContainer iframe, .wetterContainer iframe, .sbbContainer iframe, .calContainer iframe, .modemContainer2 iframe
+        {
+            position: absolute;
+            top: -315px;
+            left: -186px;
+            width: 1280px;
+            height: 2000px;
+        }
+
+        .srfContainer {
+            width: 429px;
+            height: 320px;
+        }
+
+        .modemContainer
+        {
+            width: 429px;
+            height: 212px;
+        }
+
+        .modemContainer iframe
+        {
+            position: absolute;
+            top: -1142px;
+            left: -99px;
+        }
+
+        .modemContainer2
+        {
+            width: 400px;
+            height: 253px;
+        }
+
+        .modemContainer2 iframe
+        {
+            position: absolute;
+            top: -591px;
+            left: -107px;
+        }
+        .wetterContainer
+        {
+            width: 575px;
+            height: 280px;
+        }
+
+        .wetterContainer iframe
+        {
+            position: absolute;
+            top: -13.125em;
+            left: -0.75em;
+        }
+
+        .sbbContainer
+        {
+            width: 315px;
+            height: 180px;
+        }
+
+        .sbbContainer iframe
+        {
+            position: absolute;
+            top: -12.125em;
+            left: -428px;
+        }
+
+        .calContainer
+        {
+            width: 35em;
+            height: 13.625em;
+        }
+
+        .calContainer iframe
+        {
+            position: absolute;
+            top: -12.125em;
+            left: -34.75em;
+        }
+
+        /**
+         * "Google Now" Card
+         */
+        body {
+            background: #e1e1e1;
+            margin: auto;
+        }
+        .gNow {
+            padding: 0;
+        }
+        .gNow .children {
+            float: left;
+            padding: 10px;
+        }
+        
+        div.card {
+            background: #fff;
+            /*position: relative;*/
+            overflow: auto;
+            padding: 15px;
+            box-shadow: 0px 3px rgba( 0, 0, 0, 0.1 );
+            font-family: Open Sans;
+            color: #444;
+            font-size: 16px;
+            -moz-border-radius: 2px;
+            -webkit-border-radius: 2px;
+            border-radius: 2px;
+        }
+        div.card p {
+            margin: 0 0 15px 0;
+        }
+        div.card p.card-title {
+            font-size: 22px;
+        }
+
+        div.card p.time {
+            font-size: 90px;
+            margin-bottom: 0;
+            text-align: center;
+        }
+        div.card p.time span {
+            font-size: 60px;
+        }
+        div.card p.url {
+            border-top: 1px solid #e5e5e5;
+            background-image: url('http://www.eriklindemann.com/wp-content/uploads/2013/05/url.png');
+            background-repeat: no-repeat;
+            padding: 6px 0 0 30px;
+            /*height: 30px;*/
+            /*display: block;*/
+            margin-bottom: -10px;
+        }
+        div.card p.url a {
+            color: #04bff4;
+            text-decoration: none;
+            top: 4px;
+            width: 385px;
+            /*display: block;*/
+            position: relative;
+        }
+        div.card img.full {
+        /*width: 430px;*/
+        margin: 0 0 15px -15px;
+        }
+
+        .children {
+            float: left;
+        }
+
+    </style>
+</head>
+<body>
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:500,400,300" rel="stylesheet" type="text/css">
+    <ul class="gNow container">
+        <li class="children">
+            <div class="card">
+            <p class="card-title">Unwetter Radar</p>
+            <div class="srfContainer threeThird"><iframe src="http://meteo.srf.ch/sfmeteo/rainfall_chart" scrolling="no" border="0"></iframe></div>
+            </div>
+        </li>
+        <li class="children">
+            <div class="card">
+            <p class="card-title">Wetter</p>
+            <div class="wetterContainer threeThird"><iframe src="http://meteo.search.ch/wil-sg" border="0" scrolling="no" class="30Refresh"></iframe></div>
+            </div>
+        </li>
+        <li class="children">
+            <div class="card">
+            <p class="card-title">Wil - Zürich HB</p>
+            <div class="sbbContainer threeThird"><iframe src="http://trnsprt.ch/to/z%C3%BCrich%20hb/from/wil%20sg" scrolling="no" border="0" class="2Refresh"></iframe></div>
+            </div>
+        </li>
+        <li class="children">
+            <div class="card">
+            <p class="card-title">Wil - St. Gallen</p>
+            <div class="sbbContainer threeThird"><iframe src="http://trnsprt.ch/to/St.%20gallen/from/Wil%20SG/" scrolling="no" border="0" class="2Refresh"></iframe></div>
+            </div>
+        </li>
+        <li class="children">
+            <div class="card">
+            <p id="time" class="card-title time">Time</p>
+            </div>
+        </li>
+    </ul>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <script src="jquery.isotope.min.js"></script>
+    <script>
+      $(function(){
+        $('.container').isotope({
+          itemSelector : '.children',
+          layoutMode : 'fitRows'
+        });
+
+        setInterval(function () {$(".2Refresh").each(function( index ) {
+             $(this).attr( 'src', function ( i, val ) { return val; });
+        })}, 1000*60*2);
+
+        setInterval(function () {$(".60Refresh").each(function( index ) {
+             $(this).attr( 'src', function ( i, val ) { return val; });
+        })}, 1000*3600);
+
+        setInterval(function () {$(".30Refresh").each(function( index ) {
+             $(this).attr( 'src', function ( i, val ) { return val; });
+        })}, 1000*60*30);
+
+        startTime();
+
+        function startTime() {
+            var today=new Date();
+            var h=today.getHours();
+            var m=today.getMinutes();
+            var s=today.getSeconds();
+            var day = today.getDate();
+            var year = today.getFullYear();
+            var month = today.getMonth()+1;
+            m=checkTime(m);
+            day = checkTime(day);
+            month = checkTime(month);
+            document.getElementById('time').innerHTML = h+":"+m+"<br/><span>"+day+"."+month+"."+year+"</span>";
+            t = setTimeout(function(){startTime()},1000);
+        }
+
+        function checkTime(i) {
+            if (i<10) {
+                i="0" + i;
+            }
+            return i;
+        }
+
+      });
+    </script>
+
+    </body>
+</html>
